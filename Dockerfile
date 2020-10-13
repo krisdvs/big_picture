@@ -6,6 +6,5 @@ EXPOSE 80
 #ADD static-website-example/ /var/www/html/
 RUN rm -Rf /var/www/html/*
 COPY ./*  /var/www/html/
-RUN apt-get clean
 RUN apt-get update
 ENTRYPOINT ["usr/sbin/nginx", "-g", "daemon off;"]
